@@ -8,7 +8,7 @@ import java.awt.event.*;
  *
  */
 public class mainview extends JFrame{
-
+//Gui's are tough
     private Deck deck;
 
     public mainview(Deck deck){
