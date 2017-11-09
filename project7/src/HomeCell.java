@@ -7,15 +7,14 @@ import java.util.*;
  * @author Chris Randall
  * @author Mark Donohue
  */
-public class HomeCell implements Cell{
+public class HomeCell extends AbstractCell implements Cell{
     
     private ArrayList<Card> cardStack = new ArrayList<Card>();
     private Card topCard;
     
-    public void remove() {}
-    public Card peek() {
-    		return topCard;
-    }
+
+	
+
     /**
      * Checks to see if it can move the card and moves it if possible
      * @param card card that will be moved
@@ -37,13 +36,7 @@ public class HomeCell implements Cell{
             return false;
         }
     }
-    /**
-     * Checks to see if the array is empty
-     * @return if array is empty
-     */
-    public boolean isEmpty(){
-        return cardStack.size() == 0;
-    }
+
     /**
      * Gets the size of the stack
      * @return size of the stack
@@ -51,16 +44,11 @@ public class HomeCell implements Cell{
     public int size(){
         return cardStack.size();
     }
-    /**
-     * Make the string representation of HomeCell
-     * @return string representation
-     */
-    public String toString(){
-    		String result = "";
-        for (Card element:cardStack) {
-        		result += element.toString()+"\n";
-        }
-        return result;
-    }
+    
+    //These three methods need to be completed
+	public boolean canAddFromCell(Cell cell);
+	public boolean inOrder();
+	public Iterator<Card> iterator();
+
 }
 

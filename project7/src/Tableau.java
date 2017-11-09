@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Iterator;
 
 /**
  * Tableau cell in a game of free cell
@@ -7,11 +8,11 @@ import java.util.ArrayList;
  * @author Chris Randall
  * @author Mark Donohue
  */
-public class Tableau implements Cell {
+public class Tableau extends AbstractCell implements Cell {
 
     private ArrayList<Card> cardStack = new ArrayList<Card>();
     private Card topCard;
-    
+	
     /**
      * used to add the initial cards
      * @param card card that is being added to the initial card stack
@@ -59,17 +60,6 @@ public class Tableau implements Cell {
     }
     
     /**
-     * Return if the card stack is empty
-     * @return if the card stack is empty
-     */
-    public boolean isEmpty(){
-        if (this.size() == 0)
-            return true;
-        else
-            return false;
-    }
-    
-    /**
      * Return the size of the card stack
      * @return size of the card stack
      */
@@ -77,38 +67,10 @@ public class Tableau implements Cell {
         return cardStack.size();
     }
     
-    /**
-     * Returns the string representation of the stack
-     * @return string representation
-     */
-    public String toString(){
-    		String result = "";
-        for (Card element:cardStack) {
-        		result += element.toString()+"\n";
-        }
-    		return result;
-        	
-    }
-    /**
-     * Removes the last card in the array
-     */
-    public void remove() {
-    		if (cardStack.size() > 1) {
-    			topCard = cardStack.get(cardStack.size()-1);
-    			cardStack.remove(cardStack.size()-1);
-    		}
-    		else {
-    			topCard = null;
-    			cardStack.remove(cardStack.size()-1);
-    		}
-    		
-    		
-    }
-    /**
-     * Checks to see what the top card is
-     * @return top card of the stack
-     */
-    public Card peek() {
-    		return topCard;
-    }
+    //These three methods need to be completed
+	public boolean canAddFromCell(Cell cell);
+	public boolean inOrder();
+	public Iterator<Card> iterator();
 }
+    
+
