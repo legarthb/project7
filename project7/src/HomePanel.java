@@ -1,16 +1,26 @@
+import java.awt.Color;
+import java.awt.Graphics;
 import javax.swing.*;
-import java.awt.*;
+import javax.swing.Icon;
 
-public class CardPanel extends JPanel {
-	private AbstractCell cards;
+/**
+ * Represents the GUI component for painting an image of a playing card.
+ * @author lambertk
+ * @author Brian Legarth
+ * @author Tommy Thetford
+ * @author Chris Randall
+ * @author Mark Donohue
+ */
+
+public class HomePanel extends AbstractPanel{
+	public AbstractCell cards;
     /**
      * Constructor for an empty panel, displays a wire frame. 
      */
-    public CardPanel(){
+    public HomePanel(){
     		setBackground(Color.cyan);
     }
 
-    
     /**
      * Paints the card's face image if a card is present, otherwise, paints the back side image.
      */
@@ -22,28 +32,15 @@ public class CardPanel extends JPanel {
 	    		g.setColor(Color.yellow);
 	    		int x = (getWidth() - image.getIconWidth()) / 2;
 	    		int y = (getHeight() - image.getIconHeight()) / 2;
-	    		g.drawRect(x, 10, image.getIconWidth(), image.getIconHeight());
+	    		g.drawRect(x, y, image.getIconWidth(), image.getIconHeight());
 	    	}
 	    	else{
-	    		int count = 0;
-	    		for (Card c : cards) {
+	    			Card c = cards.peek();
 	    			c.turn();
 	    			image = c.getImage();
 	    			int x = (getWidth() - image.getIconWidth()) / 2;
-	    			int y = (getHeight() - image.getIconHeight()) / 2 + count * 30;
+	    			int y = (getHeight() - image.getIconHeight()) / 2;
 	    			image.paintIcon(this, g, x, y);
-	    			count++;
-	    		}
 	    	}
-    	}
-    public void setCells(AbstractCell cell) {
-		cards = cell;
-    }
-    public AbstractCell getCells() {
-    		return cards;
-    }
-    public boolean isEmpty() {
-    		return cards.isEmpty();
-    }
+	}
 }
-

@@ -1,3 +1,4 @@
+import javax.swing.JFrame;
 /**
  * Tester of the entire FreeCell Game
  * @author Brian Legarth
@@ -7,18 +8,25 @@
  */
 public class GameTest{
     public static void main(String[] args) {
-		GameModel game = new GameModel();
-		
+    		GameView gview = new GameView();
+        final JFrame view = gview;
+        view.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        view.setTitle("tHe GamE oF WaR");
+        view.setSize(800, 650);
+        view.setResizable(false);
+        view.setVisible(true);
 		//Initial layout of game with all cards dealt
-		System.out.println(game.toString());
 		
+		
+		/**
+		 * This is the tester for just showing the original game values
 		//Creating general piles so that testing movement can be easy
-		Tableau t1 = new Tableau();
-		Tableau t2 = new Tableau();
-		Tableau t3 = new Tableau();
-		Tableau t4 = new Tableau();
-		FreeCell f1 = new FreeCell();
-		HomeCell spadeHome = new HomeCell();
+		AbstractCell t1 = new Tableau();
+		AbstractCell t2 = new Tableau();
+		AbstractCell t3 = new Tableau();
+		AbstractCell t4 = new Tableau();
+		AbstractCell f1 = new FreeCell();
+		AbstractCell spadeHome = new HomeCell();
 		
 		//Creating cards to test the movement between piles
 		Card aceSpade = new Card( new Suit(4,"spades"), 1);
@@ -27,10 +35,10 @@ public class GameTest{
 		Card kingHearts = new Card(new Suit(3, "hearts"), 13);
 		
 		//Add cards to beginning tableau piles
-		t1.addCardStart(aceSpade);
-		t2.addCardStart(twoSpade);
-		t3.addCardStart(twoDiamonds);
-		t4.addCardStart(kingHearts);
+		t1.add(aceSpade);
+		t2.add(twoSpade);
+		t3.add(twoDiamonds);
+		t4.add(kingHearts);
 		
 		//Incorrect move onto a tableau (moving ace of spades onto two of spades)
 		System.out.println("Expect a tableau incorrect move output");
@@ -68,7 +76,6 @@ public class GameTest{
 		System.out.println("Expect King of hearts");
 		game.move(f1,  t4);
 		System.out.println(t4.toString());
-		
-	}
-	
+		*/
+    }
 }
