@@ -1,8 +1,7 @@
-<<<<<<< HEAD
-=======
+
 import java.util.ArrayList;
 import java.util.Iterator;
->>>>>>> branch 'master' of https://github.com/legarthb/project7.git
+
 
 /**
  * Tableau cell in a game of free cell
@@ -11,31 +10,9 @@ import java.util.Iterator;
  * @author Chris Randall
  * @author Mark Donohue
  */
-<<<<<<< HEAD
-public class Tableau extends AbstractCell implements Cell<Card> {
-=======
-public class Tableau extends AbstractCell implements Cell {
->>>>>>> branch 'master' of https://github.com/legarthb/project7.git
 
-<<<<<<< HEAD
-    public Tableau() {
-    		super();
-    }
-  
-=======
-    private ArrayList<Card> cardStack = new ArrayList<Card>();
-    private Card topCard;
-	
-    /**
-     * used to add the initial cards
-     * @param card card that is being added to the initial card stack
-     */
-    public void addCardStart(Card card){
-    		this.cardStack.add(card);
-    		this.topCard = card;
-    		
-    }    
->>>>>>> branch 'master' of https://github.com/legarthb/project7.git
+public class Tableau extends AbstractCell implements Cell {
+
     /**
      * Checks to see if a card can be added and does it if possible
      * @param card card being checked
@@ -68,22 +45,6 @@ public class Tableau extends AbstractCell implements Cell {
     		}   	
     }
     
-<<<<<<< HEAD
-
-=======
-    /**
-     * Return the size of the card stack
-     * @return size of the card stack
-     */
-    public int size(){
-        return cardStack.size();
-    }
-    
-    //These three methods need to be completed
-	public boolean canAddFromCell(Cell cell);
-	public boolean inOrder();
-	public Iterator<Card> iterator();
->>>>>>> branch 'master' of https://github.com/legarthb/project7.git
 }
     
 
