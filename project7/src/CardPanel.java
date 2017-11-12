@@ -7,7 +7,7 @@ public class CardPanel extends JPanel {
      * Constructor for an empty panel, displays a wire frame. 
      */
     public CardPanel(){
-    		setBackground(Color.cyan);
+    		setBackground(Color.GREEN);
     }
 
     
@@ -21,8 +21,7 @@ public class CardPanel extends JPanel {
 	    		image = Card.getBack();
 	    		g.setColor(Color.yellow);
 	    		int x = (getWidth() - image.getIconWidth()) / 2;
-	    		int y = (getHeight() - image.getIconHeight()) / 2;
-	    		g.drawRect(x, 10, image.getIconWidth(), image.getIconHeight());
+	    		g.drawRect(x, 0, image.getIconWidth(), image.getIconHeight());
 	    	}
 	    	else{
 	    		int count = 0;
@@ -30,7 +29,7 @@ public class CardPanel extends JPanel {
 	    			c.turn();
 	    			image = c.getImage();
 	    			int x = (getWidth() - image.getIconWidth()) / 2;
-	    			int y = (getHeight() - image.getIconHeight()) / 2 + count * 30;
+	    			int y = count * 30;
 	    			image.paintIcon(this, g, x, y);
 	    			count++;
 	    		}

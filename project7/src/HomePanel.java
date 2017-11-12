@@ -13,12 +13,11 @@ import javax.swing.Icon;
  */
 
 public class HomePanel extends AbstractPanel{
-	public AbstractCell cards;
     /**
      * Constructor for an empty panel, displays a wire frame. 
      */
     public HomePanel(){
-    		setBackground(Color.cyan);
+    		super();
     }
 
     /**
@@ -27,7 +26,7 @@ public class HomePanel extends AbstractPanel{
     public void paintComponent(Graphics g){
 	    	super.paintComponent(g);
 	    	Icon image;
-	    	if (cards.isEmpty()){
+	    	if (this.isEmpty()){
 	    		image = Card.getBack();
 	    		g.setColor(Color.yellow);
 	    		int x = (getWidth() - image.getIconWidth()) / 2;
@@ -35,12 +34,12 @@ public class HomePanel extends AbstractPanel{
 	    		g.drawRect(x, y, image.getIconWidth(), image.getIconHeight());
 	    	}
 	    	else{
-	    			Card c = cards.peek();
-	    			c.turn();
-	    			image = c.getImage();
-	    			int x = (getWidth() - image.getIconWidth()) / 2;
-	    			int y = (getHeight() - image.getIconHeight()) / 2;
-	    			image.paintIcon(this, g, x, y);
+    			Card c = this.topCard();
+    			c.turn();
+    			image = c.getImage();
+    			int x = (getWidth() - image.getIconWidth()) / 2;
+    			int y = (getHeight() - image.getIconHeight()) / 2;
+    			image.paintIcon(this, g, x, y);
 	    	}
 	}
 }

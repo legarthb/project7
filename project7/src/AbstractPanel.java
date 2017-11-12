@@ -7,7 +7,7 @@ public abstract class AbstractPanel extends JPanel {
      * Constructor for an empty panel, displays a wire frame. 
      */
     public AbstractPanel(){
-    		setBackground(Color.cyan);
+    		setBackground(Color.BLUE);
     }
     public void paintComponent(Graphics g){
     		super.paintComponent(g);
@@ -23,5 +23,8 @@ public abstract class AbstractPanel extends JPanel {
     }
     public boolean isEmpty() {
     		return cards.isEmpty();
+    }
+    public Card topCard() {
+    		return cards.peek();
     }
 }

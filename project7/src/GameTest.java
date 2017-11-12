@@ -1,4 +1,4 @@
-import javax.swing.JFrame;
+import javax.swing.*;
 /**
  * Tester of the entire FreeCell Game
  * @author Brian Legarth
@@ -7,14 +7,15 @@ import javax.swing.JFrame;
  * @author Mark Donohue
  */
 public class GameTest{
-    public static void main(String[] args) {
-    		GameView gview = new GameView();
-        final JFrame view = gview;
-        view.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        view.setTitle("tHe GamE oF WaR");
-        view.setSize(800, 650);
-        view.setResizable(false);
-        view.setVisible(true);
+    public static void main(String[] args) { 
+    		final JFrame gview = new GameView();
+        gview.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        gview.setTitle("fReE CelL sOliTaIrE");
+        gview.setSize(800, 650);
+        gview.setResizable(false);
+        gview.setVisible(true);
+
+        
 		//Initial layout of game with all cards dealt
 		
 		

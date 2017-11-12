@@ -1,8 +1,3 @@
-
-import java.util.ArrayList;
-import java.util.Iterator;
-
-
 /**
  * Tableau cell in a game of free cell
  * @author Brian Legarth

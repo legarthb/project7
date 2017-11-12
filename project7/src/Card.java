@@ -67,11 +67,11 @@ public class Card implements Comparable<Card>{
      * @return ImageIcon the image of a card
      */
     private Icon getImageFromFile(int rank, Suit suit){
-    	String fileName = "DECK/";
-    	fileName += rank;
-    	fileName += Character.toUpperCase(suit.toString().charAt(0));
-    	fileName += ".GIF";
-    	return new ImageIcon(getClass().getResource(fileName));
+	    	String fileName = "DECK/";
+	    	fileName += rank;
+	    	fileName += Character.toUpperCase(suit.toString().charAt(0));
+	    	fileName += ".GIF";
+	    	return new ImageIcon(getClass().getResource(fileName));
     }
 
     /**
@@ -79,8 +79,8 @@ public class Card implements Comparable<Card>{
      * @return ImageIcon back of a card
      */
     private Icon getBackFromFile(){
-    	String fileName = "DECK/CARDBACK.GIF";
-    	return new ImageIcon(getClass().getResource(fileName));
+	    	String fileName = "DECK/CARDBACK.GIF";
+	    	return new ImageIcon(getClass().getResource(fileName));
     }
 
     /**
