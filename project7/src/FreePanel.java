@@ -12,6 +12,7 @@ import javax.swing.Icon;
  */
 
 public class FreePanel extends AbstractPanel{
+	
 	/**
      * Constructor for an empty panel, displays a wire frame. 
      */
@@ -20,7 +21,8 @@ public class FreePanel extends AbstractPanel{
     }
 
     /**
-     * Paints the card's face image if a card is present, otherwise, paints the back side image.
+     * Paints the card's face image if a card is present;
+     * otherwise, paints the back side image.
      */
     public void paintComponent(Graphics g){
 	    	super.paintComponent(g);

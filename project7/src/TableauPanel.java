@@ -45,7 +45,4 @@ public class TableauPanel extends AbstractPanel{
 	    		}
 	    	}
 	}
-    
-
-
 }

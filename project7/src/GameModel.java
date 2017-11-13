@@ -1,11 +1,11 @@
-
 /**
- * Model of the entire FreeCell Game
+ * Model of the entire FreeCell Game (FreeCellGame)
  * @author Brian Legarth
  * @author Tommy Thetford
  * @author Chris Randall
  * @author Mark Donohue
  */
+
 public class GameModel {
 	private AbstractCell[] freeCells;
 	private AbstractCell[] tableaux;
@@ -38,6 +38,7 @@ public class GameModel {
 			tableaux[m].add(deck.deal());
 		}
 	}
+	
 	/**
 	 * Checks to see if the object can move a card form one cell to the other
 	 * @param cell1 cell being removed from
@@ -53,6 +54,7 @@ public class GameModel {
 			}
 		}	
 	}
+	
 	/**
 	 * Converts the model to a string
 	 * @return string representation
@@ -69,12 +71,23 @@ public class GameModel {
 		return result;
 	}	
 	
+	/** Returns the ith free cell
+	 * @return the ith cree Cell
+	 */
 	public AbstractCell[] getFreeCells() {
 		return freeCells;
 	}
+	
+	/** Returns the ith tableu
+	 * @return the ith tableu
+	 */
 	public AbstractCell[] getTableauCells() {
 		return tableaux;
 	}
+	
+	/** Returns the ith home cell
+	 * @return the ith home cell
+	 */
 	public AbstractCell[] getHomeCells() {
 		return homeCells;
 	}

@@ -7,6 +7,7 @@ import java.util.Iterator;
  * @author Mark Donohue
  * @author Tommy Thetford
  */
+
 public interface Cell extends Iterable<Card> {
 	
 	/**
@@ -26,8 +27,7 @@ public interface Cell extends Iterable<Card> {
 	 * @return if the card stack is empty
 	 */
 	public boolean isEmpty();
-	
-	
+		
 	/**
 	 * Returns the card in the top of the cell
 	 * @return top card of cell
@@ -44,8 +44,5 @@ public interface Cell extends Iterable<Card> {
 	 * Returns a string representation of the cell
 	 * @return string representation
 	 */
-	public String toString();
-	
-	
-	
+	public String toString();	
 }

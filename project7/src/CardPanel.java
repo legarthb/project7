@@ -1,16 +1,24 @@
 import javax.swing.*;
 import java.awt.*;
 
+/**
+ * 
+ * @author Brian Legarth
+ * @author Tommy Thetford
+ * @author Chris Randall
+ * @author Mark Donohue
+ */
+
 public class CardPanel extends JPanel {
 	private AbstractCell cards;
-    /**
+   
+	/**
      * Constructor for an empty panel, displays a wire frame. 
      */
     public CardPanel(){
     		setBackground(Color.GREEN);
     }
 
-    
     /**
      * Paints the card's face image if a card is present, otherwise, paints the back side image.
      */
@@ -35,12 +43,26 @@ public class CardPanel extends JPanel {
 	    		}
 	    	}
     	}
+    
+    /**
+     * Assigns cards to a cell
+     */
     public void setCells(AbstractCell cell) {
 		cards = cell;
     }
+    
+    /**
+     * Returns cards collection
+     * @return cards collection
+     */
     public AbstractCell getCells() {
     		return cards;
     }
+    
+    /**
+     * Checks if cards is empty
+     * @return if cards is empty
+     */
     public boolean isEmpty() {
     		return cards.isEmpty();
     }

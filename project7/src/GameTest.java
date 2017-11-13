@@ -1,24 +1,25 @@
 import javax.swing.*;
+
 /**
- * Tester of the entire FreeCell Game
+ * Application class for a game of Free Cell (FreeCellApp);
+ * also includes a tester.
  * @author Brian Legarth
  * @author Tommy Thetford
  * @author Chris Randall
  * @author Mark Donohue
  */
+
 public class GameTest{
     public static void main(String[] args) { 
     		final JFrame gview = new GameView();
         gview.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        gview.setTitle("fReE CelL sOliTaIrE");
+        gview.setTitle("Fre CelL Solitaire");
         gview.setSize(800, 650);
         gview.setResizable(false);
         gview.setVisible(true);
-
         
 		//Initial layout of game with all cards dealt
-		
-		
+				
 		/**
 		 * This is the tester for just showing the original game values
 		//Creating general piles so that testing movement can be easy

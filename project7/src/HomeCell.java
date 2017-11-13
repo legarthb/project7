@@ -1,5 +1,5 @@
-
 /**
+ * Home cell in a game of Free Cell.
  * @author Brian Legarth
  * @author Tommy Thetford
  * @author Chris Randall

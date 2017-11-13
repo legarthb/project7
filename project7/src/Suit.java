@@ -1,4 +1,3 @@
-
 /**
  * Represents the four suits in a deck of cards.
  * They are ordered, in decreasing rank, from spade to heart to diamond to club.
@@ -31,6 +30,9 @@ public class Suit implements Comparable<Suit>{
     private int order;
     private String name;
 
+    /**
+     * Constructor for Suit class
+     */
     public Suit(int ord, String nm){
         name = nm;
         order = ord;
@@ -43,9 +45,15 @@ public class Suit implements Comparable<Suit>{
     public int compareTo(Suit other){
         return order - other.order;
     }
+    
+    /**
+     * Returns the order of the suit.
+     * @return the order of the suit.
+     */
     public int getOrder() {
     		return order;
     }
+    
     /**
      *  Returns the string representation of the suit.
      *  @return the string representation of the suit.

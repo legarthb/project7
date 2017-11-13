@@ -13,6 +13,7 @@ import javax.swing.Icon;
  */
 
 public class HomePanel extends AbstractPanel{
+	
     /**
      * Constructor for an empty panel, displays a wire frame. 
      */

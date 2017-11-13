@@ -1,5 +1,12 @@
-
 import java.util.*;
+
+/**
+ * Abstract implementation of Cell
+ * @author Brian Legarth
+ * @author Chris Randall
+ * @author Mark Donohue
+ * @author Tommy Thetford
+ */
 
 public abstract class AbstractCell implements Cell{
 	private ArrayList<Card> cardStack = new ArrayList<Card>();
@@ -10,7 +17,7 @@ public abstract class AbstractCell implements Cell{
 	}
 	
 	/**
-	 * returns an iterator that will iterate through the array list
+	 * Returns an iterator that will iterate through the array list
 	 * @return iterator that is made
 	 */
 	public Iterator<Card> iterator(){
@@ -34,7 +41,7 @@ public abstract class AbstractCell implements Cell{
 	public abstract boolean canAddCard(Card c);
 	
 	/**
-	 * removes the top card from the free cell
+	 * Removes the top card from the free cell
 	 */
 	public void remove() {
 		if (! this.isEmpty()) {
@@ -53,7 +60,7 @@ public abstract class AbstractCell implements Cell{
 	}
 	
 	/**
-	 * checks to see if the card stack is empty
+	 * Checks to see if the card stack is empty
 	 * @return if the card stack is empty
 	 */
 	public boolean isEmpty() {

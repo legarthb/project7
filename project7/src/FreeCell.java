@@ -1,4 +1,3 @@
-
 /**
  * Free cell in a free cell game
  * @author Brian Legarth
@@ -6,6 +5,7 @@
  * @author Chris Randall
  * @author Mark Donohue
  */
+
 public class FreeCell extends AbstractCell implements Cell{
 	
 	/**
@@ -20,6 +20,5 @@ public class FreeCell extends AbstractCell implements Cell{
 		else
 			System.out.println("Only one card in a free cell");
 			return false;
-	}
-	
+	}	
 }

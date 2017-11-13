@@ -2,6 +2,13 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
+/**
+ * Main window class for GameModel (AppView).
+ * @author Brian Legarth
+ * @author Tommy Thetford
+ * @author Chris Randall
+ * @author Mark Donohue
+ */
 public class GameView extends JFrame{
 
     private GameModel game;
@@ -101,6 +108,9 @@ public class GameView extends JFrame{
 
     }
     
+    /**
+     * Resets the main view.
+     */
     public void reset() {
     		game = new GameModel();
     		freeCells = game.getFreeCells();

@@ -1,5 +1,5 @@
 /**
- * Tableau cell in a game of free cell
+ * Tableau cell in a game of free cell.
  * @author Brian Legarth
  * @author Tommy Thetford
  * @author Chris Randall
@@ -38,8 +38,7 @@ public class Tableau extends AbstractCell implements Cell {
     			System.out.println("This is an improper move");
     			return false;
     		}   	
-    }
-    
+    }   
 }
     
 
